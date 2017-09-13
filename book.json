@@ -1,0 +1,35 @@
+{
+    "gitbook": "3.1.1",
+    "title": "Egghead Material 2",
+    "plugins": [
+      "include-codeblock",
+      "advanced-emoji",
+      "prism",
+      "highlight",
+      "copy-code-button",
+      "edit-link",
+      "github",
+      "github-buttons",
+      "ga"
+    ],
+    "pluginsConfig": {
+      "edit-link": {
+        "base": "https://github.com/btroncone/egghead-material2/tree/master",
+        "label": "Edit This Page"
+      },
+      "github": {
+        "url": "https://github.com/btroncone/egghead-material2/"
+      },
+      "ga": {
+          "token": "UA-54001708-2"
+      },
+      "github-buttons": {
+        "repo": "btroncone/egghead-material2",
+        "types": [
+          "star",
+          "watch"
+        ],
+        "size": "large"
+      }
+    }
+  }

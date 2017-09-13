@@ -1,4 +1,4 @@
-# Getting Started With Angular Material 2
+# Structuring An Angular Application With Material Components
 
 *Build an app structure throughout the course. Start with layout, navigation, and global concerns such as loading and tooltips. Move to buttons, form controls, etc.
 
@@ -81,7 +81,7 @@ Commonly used, site-wide features.
 #### 15 Tooltip
 - Basic tooltips
 - Positioning
-- Show / Hide delay optionss
+- Show / Hide delay options
 #### 16 Snackbar
 - Basic Snackbar
 - Configuration options
