@@ -2,7 +2,7 @@
 
 ### Structuring Angular Apps with Angular Material Components
 
-* [Getting Started](/book/getting_started/README.md)
+* [Getting Started](/book/getting_started/getting_started.md)
 * [Navigation](/book/navigation/README.md)
    * [Toolbar](/book/navigation/toolbar.md)
    * [Side Menu](/book/navigation/side_menu.md)

@@ -107,7 +107,7 @@ When you run your application you should now see a material toolbar component:
 npm start
 ```
 
-![First Toolbar](../../demo-app/src/assets/images/getting_started_1.png)
+![First Toolbar](https://i.imgur.com/2OXu3dk.png)
 
 You are now ready to start utilizing Angular Material components within your Angular application!
 
