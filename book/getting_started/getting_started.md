@@ -109,7 +109,7 @@ npm start
 
 ![First Toolbar](../../demo-app/src/assets/images/getting_started_1.png)
 
-You are now ready to start utilizing Angular Material components within your application!
+You are now ready to start utilizing Angular Material components within your Angular application!
 
 ## Recap of packages:
 
@@ -133,7 +133,7 @@ This module exposes Angular's animation API, providing smooth animations and tra
 
 #### [`hammerjs`](https://www.npmjs.com/package/hammerjs)
 
-This module adds support for touch gestures in your `@angular/material` components. You can exclude this package if you don't plan on using  
+This module adds support for touch gestures in your `@angular/material` components. You can exclude this package if you don't plan on using impacted components. 
 
 ## Material Design Background
 - [Making Material Design: Crafting Material](https://www.youtube.com/watch?v=Y0UEGsvcYvk)
