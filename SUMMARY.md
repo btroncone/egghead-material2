@@ -1,6 +1,6 @@
 # Summary
 
-### Structuring An Angular Application With Material Components
+### Structuring Angular Apps with Angular Material Components
 
 * [Getting Started](/book/getting_started/README.md)
 * [Navigation](/book/navigation/README.md)

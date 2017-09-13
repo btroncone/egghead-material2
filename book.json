@@ -1,6 +1,6 @@
 {
     "gitbook": "3.1.1",
-    "title": "Egghead Material 2",
+    "title": "Structuring Angular Apps with Angular Material Components",
     "plugins": [
       "include-codeblock",
       "advanced-emoji",
@@ -9,8 +9,7 @@
       "copy-code-button",
       "edit-link",
       "github",
-      "github-buttons",
-      "ga"
+      "github-buttons"
     ],
     "pluginsConfig": {
       "edit-link": {
@@ -19,9 +18,6 @@
       },
       "github": {
         "url": "https://github.com/btroncone/egghead-material2/"
-      },
-      "ga": {
-          "token": "UA-54001708-2"
       },
       "github-buttons": {
         "repo": "btroncone/egghead-material2",
