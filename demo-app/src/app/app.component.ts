@@ -29,7 +29,7 @@ export class AppComponent {
     private _viewportRuler : ViewportRuler
   ) {}
 
-  determineHeader = ({ top } : { top: number }) => {
+  determineHeader({ top } : { top: number }) {
     if (top >= PRIMARY_TEXT_THRESHOLD) {
       this.popText = true;
     } else {
