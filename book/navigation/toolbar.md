@@ -18,6 +18,7 @@ export class AppMaterialModule { }
 
 The `md-toolbar` component will now be available to use in your component templates. Let's start by including a basic toolbar in our main app component:
 
+*app.component.ts*
 ```html
 <md-toolbar>Structuring Angular Apps with Angular Material Components</md-toolbar>
 ```
@@ -131,7 +132,7 @@ export const PRIMARY_SHADOW_THRESHOLD = 100;
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
-  @HostListener('window:scroll', ['$event']) private onScroll() {
+  @HostListener('window:scroll') private onScroll() {
     this.determineHeader(this._viewportRuler.getViewportScrollPosition());
   };
 
