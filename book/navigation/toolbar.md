@@ -37,7 +37,7 @@ Toolbars can be colored using the `color` input. The options are `primary`, `acc
 
 Toolbars can also be nested, using the `md-toolbar-row` component: 
 
-:warning: The color of nested `toolbar-row` components is dependant on that of the parent `md-toolbar`.
+:warning: The color of nested `toolbar-row` components is dependent on that of the parent `md-toolbar`.
 
 ```html
 <md-toolbar color="primary">
