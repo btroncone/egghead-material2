@@ -59,12 +59,12 @@ First let's add two `md-toolbar` components. The first will be the sticky header
 *app.component.ts*
 ```html
 <div class="app-content">
-    <md-toolbar color="primary" class="primary-header">
-    <span>Structuring Angular Apps with Angular Material Components</span>
-    </md-toolbar>
-    <md-toolbar color="primary" class="extended-header">
-    <span>Material Design Toolbars</span>
-    </md-toolbar>
+  <md-toolbar color="primary" class="primary-header">
+   <span>Structuring Angular Apps with Angular Material Components</span>
+  </md-toolbar>
+  <md-toolbar color="primary" class="extended-header">
+   <span>Material Design Toolbars</span>
+  </md-toolbar>
 </div>
 ```
 
