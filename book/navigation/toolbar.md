@@ -166,3 +166,4 @@ The material design extended header component is ready to go!
 ## Material Design Guidelines
 - [Toolbars](https://material.io/guidelines/components/toolbars.html)
 - [Subheaders](https://material.io/guidelines/components/subheaders.html)
+- [Scrolling Techniques](https://material.io/guidelines/patterns/scrolling-techniques.html#)
