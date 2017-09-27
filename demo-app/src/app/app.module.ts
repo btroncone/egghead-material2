@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppMaterialModule } from './app-material.module';
 import { AppComponent } from './app.component';
+import { NavHeaderModule } from './shared/navheader/nav-header.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    AppMaterialModule
+    AppMaterialModule,
+    NavHeaderModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

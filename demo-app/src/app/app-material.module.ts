@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MdSidenavModule } from '@angular/material';
 import { ScrollDispatchModule, VIEWPORT_RULER_PROVIDER } from '@angular/cdk/scrolling';
 
 @NgModule({
   exports: [
-    MdToolbarModule,
-    ScrollDispatchModule
+    ScrollDispatchModule,
+    MdSidenavModule
   ],
   providers: [ VIEWPORT_RULER_PROVIDER ]
 })

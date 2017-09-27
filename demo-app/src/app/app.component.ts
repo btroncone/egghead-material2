@@ -5,26 +5,27 @@ export const PRIMARY_TEXT_THRESHOLD = 34;
 export const PRIMARY_SHADOW_THRESHOLD = 100;
 
 @Component({
-  selector: 'app-root',
+  selector: 'egm-app',
   template: `
-  <div class="app-content">
-    <md-toolbar color="primary" class="primary-header" [class.with-shadow]="applyShadow">
-      <span *ngIf="popText">Structuring Angular Apps with Angular Material Components</span>
-    </md-toolbar>
-    <md-toolbar color="primary" class="extended-header">
-      <span *ngIf="!popText">Material Design Toolbars</span>
-    </md-toolbar>
-  </div>,
+  <md-sidenav-container>
+    <egm-navheader
+      (openSidenav)="sidenav.open()"
+      [popText]="popText"
+      [applyShadow]="applyShadow">
+    </egm-navheader>
+    <md-sidenav #sidenav class="app-sidenav"></md-sidenav>
+    <div class="app-content"> </div>
+  </md-sidenav-container>
   `,
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
-  @HostListener('window:scroll') private onScroll() {
-    this.determineHeader(this._viewportRuler.getViewportScrollPosition())
-  }
-
   public popText : boolean;
   public applyShadow : boolean;
+
+  @HostListener('window:scroll') private onScroll() {
+    this.determineHeader(this._viewportRuler.getViewportScrollPosition());
+  }
 
   constructor(
     private _viewportRuler : ViewportRuler
