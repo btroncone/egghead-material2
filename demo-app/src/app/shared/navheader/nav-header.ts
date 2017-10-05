@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       <button md-icon-button (click)="openSidenav.emit()">
         <md-icon>menu</md-icon>
       </button>
-      <span class="primary-text">Md-Sidenav</span>
+      <span class="primary-text">Lists</span>
     </md-toolbar>
   `,
   styleUrls: ['./nav-header.scss']

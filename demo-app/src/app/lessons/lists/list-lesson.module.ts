@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MdListModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { MdListModule, MdIconModule, MdButtonModule } from '@angular/material';
 import { ListLessonComponent } from './list-lesson.component';
 
 @NgModule({
@@ -10,8 +9,9 @@ import { ListLessonComponent } from './list-lesson.component';
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,
-    MdListModule
+    MdListModule,
+    MdIconModule,
+    MdButtonModule
   ]
 })
 export class ListLessonModule { }
