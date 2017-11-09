@@ -9,26 +9,24 @@ To get started with Angular Material you first need to install `@angular/materia
 npm install --save @angular/material @angular/cdk
 ```
 
-It is suggested you also install `@angular/animations` and `hammerjs`. While these modules are not required you may notice some components behave irregularly if you don't include these packages. One example is the `md-slider` component, whose touch support is compromised without the addition of `hammerjs`.
+It is suggested you also install `@angular/animations` and `hammerjs`. While these modules are not required you may notice some components behave irregularly if you don't include these packages. One example is the `mat-slider` component, whose touch support is compromised without the addition of `hammerjs`.
 
 ```bash
 npm install --save @angular/animations hammerjs
 ```
 
-Once installation is complete it's time to set up a custom material module to encapsulate the components you are currently (or plan on using) for your application. This module will import relevant material components for your app. To get started we will include the `MdToolbarModule`:
-
-:bulb: `@angular/material` also exports a `MaterialModule` which includes all material components. It is recommended you do not use this and instead only include the components required by your application in a custom, application specific module. This helps keep your build as small as possible without relying on tree-shaking.
+Once installation is complete it's time to set up a custom material module to encapsulate the components you are currently (or plan on using) for your application. This module will import relevant material components for your app. To get started we will include the `MatToolbarModule`:
 
 :bulb: We are using the [Angular CLI](https://github.com/angular/angular-cli) for this project but setup would be similar for any of your Angular applications.
 
 *app-material.module.ts*
 ```ts
 import { NgModule } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
   exports: [
-    MdToolbarModule
+    MatToolbarModule
   ]
 })
 export class AppMaterialModule { }
@@ -86,19 +84,11 @@ Last, you need to include a material theme. We will discuss theming in depth in 
 
 Let's add a toolbar to the main app component to make sure everything is working correctly:
 
-*app.component.ts*
-```ts
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  template: `
-  <md-toolbar color="primary">
-    Structuring Angular Apps with Angular Material Components
-  </md-toolbar>
-  `,
-})
-export class AppComponent {}
+*app.component.html*
+```html
+<mat-toolbar color="primary">
+  Structuring Angular Apps with Angular Material Components
+</mat-toolbar>  
 ```
 
 When you run your application you should now see a material toolbar component:

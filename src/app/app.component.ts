@@ -3,16 +3,16 @@ import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'egm-app',
   template: `
-  <md-sidenav-container fullscreen>
+  <mat-sidenav-container fullscreen>
     <egm-navheader
       (openSidenav)="sidenav.open()">
     </egm-navheader>
-    <md-sidenav #sidenav class="app-sidenav"></md-sidenav>
+    <mat-sidenav #sidenav class="app-sidenav"></mat-sidenav>
     <div class="app-content">
       <router-outlet></router-outlet>
     </div>
-  </md-sidenav-container>
+  </mat-sidenav-container>
   `,
-  styleUrls: [ './app.component.scss' ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {}

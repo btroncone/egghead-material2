@@ -6,21 +6,21 @@
 *app-material.module.ts*
 ```ts
 import { NgModule } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
   exports: [
-    MdToolbarModule
+    MatToolbarModule
   ]
 })
 export class AppMaterialModule { }
 ```
 
-The `md-toolbar` component will now be available to use in your component templates. Let's start by including a basic toolbar in our main app component:
+The `mat-toolbar` component will now be available to use in your component templates. Let's start by including a basic toolbar in our main app component:
 
 *app.component.ts*
 ```html
-<md-toolbar>Structuring Angular Apps with Angular Material Components</md-toolbar>
+<mat-toolbar>Structuring Angular Apps with Angular Material Components</mat-toolbar>
 ```
 
 ![Default Toolbar](https://i.imgur.com/9zppIMU.png)
@@ -28,43 +28,43 @@ The `md-toolbar` component will now be available to use in your component templa
 Toolbars can be colored using the `color` input. The options are `primary`, `accent`, or `warn`, applying the appropriate background based on your application theme:
 
 ```html
-<md-toolbar>No Setting</md-toolbar>
-<md-toolbar color="primary">Primary</md-toolbar>
-<md-toolbar color="accent">Accent</md-toolbar>
-<md-toolbar color="warn">Warn</md-toolbar>
+<mat-toolbar>No Setting</mat-toolbar>
+<mat-toolbar color="primary">Primary</mat-toolbar>
+<mat-toolbar color="accent">Accent</mat-toolbar>
+<mat-toolbar color="warn">Warn</mat-toolbar>
 ```
 ![Toolbar Colors](https://i.imgur.com/JkrwDgy.png)
 
-Toolbars can also be nested, using the `md-toolbar-row` component: 
+Toolbars can also be nested, using the `mat-toolbar-row` component: 
 
-:warning: The color of nested `toolbar-row` components is dependent on that of the parent `md-toolbar`.
+:warning: The color of nested `toolbar-row` components is dependent on that of the parent `mat-toolbar`.
 
 ```html
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
     <span>Structuring Angular Apps with Angular Material Components</span>
-    <md-toolbar-row color="primary">Structuring Angular Apps with Angular Material Components</md-toolbar-row>
-    <md-toolbar-row color="accent">Structuring Angular Apps with Angular Material Components</md-toolbar-row>
-    <md-toolbar-row color="warn">Structuring Angular Apps with Angular Material Components</md-toolbar-row>
-</md-toolbar> 
+    <mat-toolbar-row color="primary">Structuring Angular Apps with Angular Material Components</mat-toolbar-row>
+    <mat-toolbar-row color="accent">Structuring Angular Apps with Angular Material Components</mat-toolbar-row>
+    <mat-toolbar-row color="warn">Structuring Angular Apps with Angular Material Components</mat-toolbar-row>
+</mat-toolbar> 
 ```
 
 ## Creating An Extended Header
-One material design pattern I particularly like is the extended header, as seen on sites like [Material Design Guidelines](https://material.io/guidelines/). Let's see how we can quickly recreate this effect using the `md-toolbar` component and material design cdk.
+One material design pattern I particularly like is the extended header, as seen on sites like [Material Design Guidelines](https://material.io/guidelines/). Let's see how we can quickly recreate this effect using the `mat-toolbar` component and material design cdk.
 
 
 ![Extended Header](https://i.imgur.com/zC35Ygt.gif)
 
-First let's add two `md-toolbar` components. The first will be the sticky header, the second the extended header to scroll under as the user moves down on the page. We will also add some basic CSS to fix our primary app header to the top and increase the padding and font size of the extended header:
+First let's add two `mat-toolbar` components. The first will be the sticky header, the second the extended header to scroll under as the user moves down on the page. We will also add some basic CSS to fix our primary app header to the top and increase the padding and font size of the extended header:
 
 *app.component.ts*
 ```html
 <div class="app-content">
-  <md-toolbar color="primary" class="primary-header">
+  <mat-toolbar color="primary" class="primary-header">
    <span>Structuring Angular Apps with Angular Material Components</span>
-  </md-toolbar>
-  <md-toolbar color="primary" class="extended-header">
+  </mat-toolbar>
+  <mat-toolbar color="primary" class="extended-header">
    <span>Material Design Toolbars</span>
-  </md-toolbar>
+  </mat-toolbar>
 </div>
 ```
 
@@ -98,12 +98,12 @@ Now we need to add the proper queues for when to show and hide the appropriate h
 *app-material.module.ts*
 ```ts
 import { NgModule } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
 import { ScrollDispatchModule, VIEWPORT_RULER_PROVIDER } from '@angular/cdk/scrolling';
 
 @NgModule({
   exports: [
-    MdToolbarModule,
+    MatToolbarModule,
     ScrollDispatchModule
   ],
   providers: [ VIEWPORT_RULER_PROVIDER ]
@@ -121,12 +121,12 @@ export const PRIMARY_SHADOW_THRESHOLD = 100;
   selector: 'app-root',
   template: `
   <div class="app-content">
-      <md-toolbar color="primary" class="primary-header" [class.with-shadow]="applyShadow">
+      <mat-toolbar color="primary" class="primary-header" [class.with-shadow]="applyShadow">
         <span *ngIf="popText">Structuring Angular Apps with Angular Material Components</span>
-      </md-toolbar>
-      <md-toolbar color="primary" class="extended-header">
+      </mat-toolbar>
+      <mat-toolbar color="primary" class="extended-header">
         <span *ngIf="!popText">Material Design Toolbars</span>
-      </md-toolbar>
+      </mat-toolbar>
   </div>
   `,
   styleUrls: [ './app.component.scss' ]
