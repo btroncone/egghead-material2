@@ -10,7 +10,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, Routes, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { map, filter } from 'rxjs/operators';
-import { LESSON_ROUTES } from './lessons/lessons.routes';
+import { LESSON_ROUTES, LessonRoutes } from './lessons/lessons.routes';
 
 @Component({
   selector: 'egm-app',
@@ -65,7 +65,7 @@ export class AppComponent {
   }
 }
 
-export function createRouteMap(routes: Routes) {
+export function createRouteMap(routes: LessonRoutes) {
   return routes.reduce((acc: { [key: string]: string }, route) => {
     return { ...acc, [route.path]: route.data.lessonName };
   }, {});

@@ -9,12 +9,14 @@
       <a mat-list-item
          *ngFor="let lesson of lessons; let i = index"
          [routerLink]="lesson.path">
-        {{i + 1}} - {{ lesson.data.lessonName }}
+        {{i + 1}} - {{ lesson.data.shortName }}
       </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-toolbar color="accent"> {{ header$ | async }} </mat-toolbar>
-  <router-outlet></router-outlet>
+  <div class="lesson-wrapper">
+    <router-outlet></router-outlet>
+  </div>
 </mat-sidenav-container>
 <button *ngIf="smallScreen | async"
         mat-mini-fab
