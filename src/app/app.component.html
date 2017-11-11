@@ -8,7 +8,8 @@
     <mat-nav-list>
       <a mat-list-item
          *ngFor="let lesson of lessons; let i = index"
-         [routerLink]="lesson.path">
+         [routerLink]="lesson.path"
+         routerLinkActive="active-lesson">
         {{i + 1}} - {{ lesson.data.shortName }}
       </a>
     </mat-nav-list>
