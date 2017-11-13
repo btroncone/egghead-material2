@@ -14,8 +14,10 @@
       </a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-toolbar color="accent"> {{ header$ | async }} </mat-toolbar>
-  <div class="lesson-wrapper mat-typography">
+  <mat-toolbar color="accent"
+               *ngIf="lessonConfig.shouldUseStandardStyles | async"> {{ header$ | async }} </mat-toolbar>
+  <div class="mat-typography"
+       [class.lesson-wrapper]="lessonConfig.shouldUseStandardStyles | async">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

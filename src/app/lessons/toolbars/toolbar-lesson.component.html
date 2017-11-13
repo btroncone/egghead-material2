@@ -1,0 +1,23 @@
+<mat-toolbar color="accent"
+             class="primary-header"
+             [class.mat-elevation-z2]="applyShadow">
+  <span *ngIf="popText">Structuring Angular Apps with Angular Material Components</span>
+</mat-toolbar>
+<mat-toolbar color="accent"
+             class="extended-header">
+  <span *ngIf="!popText">Material Design Toolbars</span>
+</mat-toolbar>
+<div class="lesson-content">
+  <h2>Toolbar Color Options</h2>
+  <mat-toolbar>No Setting</mat-toolbar>
+  <mat-toolbar color="primary">Primary</mat-toolbar>
+  <mat-toolbar color="accent">Accent</mat-toolbar>
+  <mat-toolbar color="warn">Warn</mat-toolbar>
+
+  <h2>Toolbar Rows</h2>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row color="primary">Primary</mat-toolbar-row>
+    <mat-toolbar-row color="accent">Accent</mat-toolbar-row>
+    <mat-toolbar-row color="warn">Warn</mat-toolbar-row>
+  </mat-toolbar>
+</div>

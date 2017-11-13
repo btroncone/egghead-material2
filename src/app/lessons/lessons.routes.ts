@@ -2,6 +2,8 @@ import { Route } from '@angular/router';
 
 import { ListLessonComponent } from './lists/list-lesson.component';
 import { IconsLessonComponent } from './icons/icons-lesson.component';
+import { InputsLessonComponent } from './inputs/inputs-lesson.component';
+import { ToolbarLessonComponent } from './toolbars/toolbar-lesson.component';
 
 export interface LessonRoute extends Route {
   data: {
@@ -19,6 +21,23 @@ export const LESSON_ROUTES: LessonRoutes = [
     data: {
       shortName: 'Icons',
       lessonName: 'Utilize Material Design Icons for App Icons and Buttons'
+    }
+  },
+  {
+    path: 'toolbars',
+    component: ToolbarLessonComponent,
+    data: {
+      shortName: 'Toolbars',
+      lessonName: 'Utilize Material Design Toolbars for Application Headers'
+    }
+  },
+  {
+    path: 'inputs',
+    component: InputsLessonComponent,
+    data: {
+      shortName: 'Inputs',
+      lessonName:
+        'Manage User Input with Material Design Inputs and AutoComplete'
     }
   },
   {

@@ -6,10 +6,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { EGGHEAD_MATERIAL_ROUTES } from './app.routes';
 import { AppMaterialModule } from './app-material.module';
+import { LessonConfigService } from './shared/lesson-config.service';
 import { AppComponent } from './app.component';
 
 import { ListLessonModule } from './lessons/lists/list-lesson.module';
 import { IconsLessonModule } from './lessons/icons/icons-lesson.module';
+import { InputsLessonModule } from './lessons/inputs/inputs-lesson.module';
+import { ToolbarLessonModule } from './lessons/toolbars/toolbar-lesson.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,9 +23,11 @@ import { IconsLessonModule } from './lessons/icons/icons-lesson.module';
     RouterModule.forRoot(EGGHEAD_MATERIAL_ROUTES),
     AppMaterialModule,
     IconsLessonModule,
-    ListLessonModule
+    ListLessonModule,
+    InputsLessonModule,
+    ToolbarLessonModule
   ],
-  providers: [],
+  providers: [LessonConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

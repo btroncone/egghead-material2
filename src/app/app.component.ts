@@ -9,7 +9,8 @@ import {
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, Routes, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, shareReplay } from 'rxjs/operators';
+import { LessonConfigService } from './shared/lesson-config.service';
 import { LESSON_ROUTES, LessonRoutes } from './lessons/lessons.routes';
 
 @Component({
@@ -44,13 +45,15 @@ export class AppComponent {
   public header$: Observable<string>;
 
   constructor(
+    public lessonConfig: LessonConfigService,
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
     private _breakpointObserver: BreakpointObserver
   ) {
     this.header$ = _router.events.pipe(
       filter(e => e instanceof NavigationEnd),
-      map(_ => this.routeMap[_router.url.replace('/', '')])
+      map(_ => this.routeMap[_router.url.replace('/', '')]),
+      shareReplay()
     );
   }
 
