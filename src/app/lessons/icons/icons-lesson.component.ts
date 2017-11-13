@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material';
 
 @Component({
   selector: 'egm-icons-lesson',
@@ -6,7 +8,17 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./icons-lesson.component.scss']
 })
 export class IconsLessonComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private _iconRegistry: MatIconRegistry,
+    private _sanitizer: DomSanitizer
+  ) {
+    _iconRegistry.addSvgIcon(
+      'custom-camera',
+      _sanitizer.bypassSecurityTrustResourceUrl(
+        'assets/custom-icons/custom-camera.svg'
+      )
+    );
+  }
 
   ngOnInit() {}
 }
