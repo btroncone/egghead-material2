@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -16,6 +17,7 @@ import { IconsLessonModule } from './lessons/icons/icons-lesson.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule,
     RouterModule.forRoot(EGGHEAD_MATERIAL_ROUTES),
     AppMaterialModule,
