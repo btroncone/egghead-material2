@@ -4,6 +4,7 @@ import { ListLessonComponent } from './lists/list-lesson.component';
 import { IconsLessonComponent } from './icons/icons-lesson.component';
 import { InputsLessonComponent } from './inputs/inputs-lesson.component';
 import { ToolbarLessonComponent } from './toolbars/toolbar-lesson.component';
+import { LoadingLessonComponent } from './loading/loading-lesson.component';
 
 export interface LessonRoute extends Route {
   data: {
@@ -46,6 +47,14 @@ export const LESSON_ROUTES: LessonRoutes = [
     data: {
       shortName: 'Lists',
       lessonName: 'Lists'
+    }
+  },
+  {
+    path: 'loading',
+    component: LoadingLessonComponent,
+    data: {
+      shortName: 'Loading',
+      lessonName: 'Loading Lesson'
     }
   }
 ];
