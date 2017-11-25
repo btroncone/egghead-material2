@@ -6,7 +6,6 @@ import {
   style,
   animate
 } from '@angular/animations';
-import { Subject } from 'rxjs/Subject';
 import { interval } from 'rxjs/observable/interval';
 import { concat } from 'rxjs/observable/concat';
 import { takeWhile, map, take, tap, ignoreElements } from 'rxjs/operators';
@@ -34,7 +33,6 @@ export class LoadingLessonComponent implements OnInit {
   public currentPlayback = 0;
   public queryValue = 0;
   public queryMode = 'query';
-  // public resetSpinners = new Subject<boolean>();
 
   ngOnInit() {
     this.loadingProgress(500).subscribe(i => (this.loadingPercent = i));
