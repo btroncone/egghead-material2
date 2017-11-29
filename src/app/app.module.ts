@@ -15,6 +15,7 @@ import { IconsLessonModule } from './lessons/icons/icons-lesson.module';
 import { InputsLessonModule } from './lessons/inputs/inputs-lesson.module';
 import { ToolbarLessonModule } from './lessons/toolbars/toolbar-lesson.module';
 import { LoadingLessonModule } from './lessons/loading/loading-lesson.module';
+import { TabsLessonModule } from './lessons/tabs/tabs-lesson.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +30,8 @@ import { LoadingLessonModule } from './lessons/loading/loading-lesson.module';
     ListLessonModule,
     InputsLessonModule,
     ToolbarLessonModule,
-    LoadingLessonModule
+    LoadingLessonModule,
+    TabsLessonModule
   ],
   providers: [LessonConfigService],
   bootstrap: [AppComponent]
