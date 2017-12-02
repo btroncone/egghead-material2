@@ -32,7 +32,6 @@ export class ToolbarLessonComponent implements OnInit, OnDestroy {
   }
 
   determineHeader(top: number) {
-    console.log('something');
     if (top >= PRIMARY_TEXT_THRESHOLD) {
       this.popText = true;
     } else {

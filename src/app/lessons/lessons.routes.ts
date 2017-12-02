@@ -6,6 +6,8 @@ import { InputsLessonComponent } from './inputs/inputs-lesson.component';
 import { ToolbarLessonComponent } from './toolbars/toolbar-lesson.component';
 import { LoadingLessonComponent } from './loading/loading-lesson.component';
 import { TabsLessonComponent } from './tabs/tabs-lesson.component';
+import { TabRouteOneComponent } from './tabs/tab-routes/tab-route-one.component';
+import { TabRouteTwoComponent } from './tabs/tab-routes/tab-route-two.component';
 
 export interface LessonRoute extends Route {
   data: {
@@ -64,6 +66,21 @@ export const LESSON_ROUTES: LessonRoutes = [
     data: {
       shortName: 'Tabs',
       lessonName: 'Tabs Lesson'
-    }
+    },
+    children: [
+      {
+        path: 'tab-route-one',
+        component: TabRouteOneComponent
+      },
+      {
+        path: 'tab-route-two',
+        component: TabRouteTwoComponent
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'tab-route-one'
+      }
+    ]
   }
 ];

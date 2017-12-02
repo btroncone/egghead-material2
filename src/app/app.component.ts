@@ -52,7 +52,7 @@ export class AppComponent {
   ) {
     this.header$ = _router.events.pipe(
       filter(e => e instanceof NavigationEnd),
-      map(_ => this.routeMap[_router.url.replace('/', '')]),
+      map(_ => this.routeMap[_router.url.replace('/', '')] || 'Tabs Lesson'),
       shareReplay()
     );
   }
