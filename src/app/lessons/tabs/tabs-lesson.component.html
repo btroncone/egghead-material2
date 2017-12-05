@@ -1,1 +1,13 @@
-<h2>Tabs</h2>
+<nav mat-tab-nav-bar>
+  <a *ngFor="let tab of tabRoutes; let i = index;"
+     mat-tab-link
+     [routerLink]="tab.path"
+     routerLinkActive
+     #rla="routerLinkActive"
+     [active]="rla.isActive">
+    Tab {{ i + 1 }}
+  </a>
+
+</nav>
+
+<router-outlet></router-outlet>
