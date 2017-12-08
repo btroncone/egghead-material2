@@ -1,12 +1,13 @@
 @import '~@angular/material/theming';
-@import './app-theme';
 @import './styles/general';
+@import './app/lessons/theming/custom_lesson_theme';
 
 @include mat-core();
 
-$primary: mat-palette($mat-indigo);
-$accent: mat-palette($mat-pink, A200, A100, A400);
+$primary: mat-palette($mat-purple);
+$accent: mat-palette($mat-blue, A200, A100, A400);
 
 $theme: mat-light-theme($primary, $accent);
+
 @include angular-material-theme($theme);
-@include egghead-app-theme($theme);
+@include custom-lesson-theme($theme);

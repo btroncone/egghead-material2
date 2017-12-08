@@ -5,6 +5,7 @@ import { IconsLessonComponent } from './icons/icons-lesson.component';
 import { InputsLessonComponent } from './inputs/inputs-lesson.component';
 import { ToolbarLessonComponent } from './toolbars/toolbar-lesson.component';
 import { LoadingLessonComponent } from './loading/loading-lesson.component';
+import { ThemingLessonComponent } from './theming/theming-lesson.component';
 import { TabsLessonComponent } from './tabs/tabs-lesson.component';
 import { TabRouteOneComponent } from './tabs/tab-routes/tab-route-one.component';
 import { TabRouteTwoComponent } from './tabs/tab-routes/tab-route-two.component';
@@ -58,6 +59,14 @@ export const LESSON_ROUTES: LessonRoutes = [
     data: {
       shortName: 'Loading',
       lessonName: 'Loading Lesson'
+    }
+  },
+  {
+    path: 'theming',
+    component: ThemingLessonComponent,
+    data: {
+      shortName: 'Theming',
+      lessonName: 'Theming Lesson'
     }
   },
   {
