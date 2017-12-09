@@ -10,9 +10,10 @@ import { InputsLessonComponent } from './inputs-lesson.component';
 
 @NgModule({
   declarations: [InputsLessonComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatInputModule],
-  providers: [
-    { provide: MAT_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'never' } }
-  ]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatInputModule]
+  // If you wish to globally configure placeholder options
+  // providers: [
+  //   { provide: MAT_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'never' } }
+  // ]
 })
 export class InputsLessonModule {}

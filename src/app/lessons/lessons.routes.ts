@@ -6,6 +6,10 @@ import { InputsLessonComponent } from './inputs/inputs-lesson.component';
 import { ToolbarLessonComponent } from './toolbars/toolbar-lesson.component';
 import { LoadingLessonComponent } from './loading/loading-lesson.component';
 import { ThemingLessonComponent } from './theming/theming-lesson.component';
+import { SnackbarLessonComponent } from './snackbar/snackbar-lesson.component';
+import { DataTableLessonComponent } from './datatable/datatable-lesson.component';
+import { DialogLessonComponent } from './dialogs/dialog-lesson.component';
+import { DatepickerLessonComponent } from './datepicker/datepicker-lesson.component';
 import { TabsLessonComponent } from './tabs/tabs-lesson.component';
 import { TabRouteOneComponent } from './tabs/tab-routes/tab-route-one.component';
 import { TabRouteTwoComponent } from './tabs/tab-routes/tab-route-two.component';
@@ -59,6 +63,38 @@ export const LESSON_ROUTES: LessonRoutes = [
     data: {
       shortName: 'Loading',
       lessonName: 'Loading Lesson'
+    }
+  },
+  {
+    path: 'snackbar',
+    component: SnackbarLessonComponent,
+    data: {
+      shortName: 'Snackbar',
+      lessonName: 'Snackbar Lesson'
+    }
+  },
+  {
+    path: 'dialog',
+    component: DialogLessonComponent,
+    data: {
+      shortName: 'Dialog',
+      lessonName: 'Dialog Lesson'
+    }
+  },
+  {
+    path: 'datepicker',
+    component: DatepickerLessonComponent,
+    data: {
+      shortName: 'Datepicker',
+      lessonName: 'Datepicker Lesson'
+    }
+  },
+  {
+    path: 'datatable',
+    component: DataTableLessonComponent,
+    data: {
+      shortName: 'Data Table',
+      lessonName: 'Data Table Lesson'
     }
   },
   {

@@ -16,6 +16,10 @@ import { InputsLessonModule } from './lessons/inputs/inputs-lesson.module';
 import { ToolbarLessonModule } from './lessons/toolbars/toolbar-lesson.module';
 import { LoadingLessonModule } from './lessons/loading/loading-lesson.module';
 import { TabsLessonModule } from './lessons/tabs/tabs-lesson.module';
+import { SnackbarLessonModule } from './lessons/snackbar/snackbar-lesson.module';
+import { DataTableLessonModule } from './lessons/datatable/datatable-lesson.module';
+import { DatepickerLessonModule } from './lessons/datepicker/datepicker-lesson.module';
+import { DialogLessonModule } from './lessons/dialogs/dialog-lesson.module';
 import { ThemingLessonModule } from './lessons/theming/theming-lesson.module';
 
 @NgModule({
@@ -33,6 +37,10 @@ import { ThemingLessonModule } from './lessons/theming/theming-lesson.module';
     ToolbarLessonModule,
     LoadingLessonModule,
     TabsLessonModule,
+    SnackbarLessonModule,
+    DataTableLessonModule,
+    DatepickerLessonModule,
+    DialogLessonModule,
     ThemingLessonModule
   ],
   providers: [LessonConfigService],
