@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Platform } from '@angular/cdk/platform';
+// import * as moment from 'moment';
 
 @Component({
   selector: 'egm-datepicker-lesson',
