@@ -1,10 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material';
+import {
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule
+} from '@angular/material';
 import { DataTableLessonComponent } from './datatable-lesson.component';
 
 @NgModule({
   declarations: [DataTableLessonComponent],
-  imports: [CommonModule, MatTableModule]
+  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule]
 })
 export class DataTableLessonModule {}
