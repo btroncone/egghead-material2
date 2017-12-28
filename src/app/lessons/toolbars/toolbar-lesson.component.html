@@ -1,7 +1,19 @@
+<!--
+  Angular material offers elevation helper classes within a range of 0-24,
+  corresponding to the projected height. These can also be applied through
+  the mat-elevation(z) mixin, exposed through '~@angular/material/theming'.
+  This also includes transition mixins should you wish to animate interactions
+  like hover, or mouse clicks on custom components.
+
+  For more: https://material.angular.io/guide/elevation
+  Elevation guide: https://material.io/guidelines/material-design/elevation-shadows.html
+-->
 <mat-toolbar color="accent"
              class="primary-header"
              [class.mat-elevation-z2]="applyShadow">
-  <span *ngIf="popText">Structuring Angular Apps with Angular Material Components</span>
+  <span *ngIf="popText">
+    Structuring Angular Apps with Angular Material Components
+  </span>
 </mat-toolbar>
 <mat-toolbar color="accent"
              class="extended-header">

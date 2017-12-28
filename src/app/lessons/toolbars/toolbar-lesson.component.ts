@@ -3,7 +3,7 @@ import { fromEvent } from 'rxjs/observable/fromEvent';
 import { Subject } from 'rxjs/Subject';
 import { LessonConfigService } from '../../shared/lesson-config.service';
 import { AppComponent } from '../../app.component';
-import 'rxjs/add/operator/takeUntil';
+import { takeUntil } from 'rxjs/operators';
 
 export const SCROLL_CONTAINER = '.mat-drawer-content';
 export const PRIMARY_TEXT_THRESHOLD = 22;
@@ -27,7 +27,7 @@ export class ToolbarLessonComponent implements OnInit, OnDestroy {
     const container = document.querySelector(SCROLL_CONTAINER);
 
     fromEvent(container, 'scroll')
-      .takeUntil(this._onDestroy)
+      .pipe(takeUntil(this._onDestroy))
       .subscribe(_ => this.determineHeader(container.scrollTop));
   }
 
