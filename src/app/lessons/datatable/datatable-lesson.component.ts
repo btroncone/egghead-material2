@@ -4,7 +4,7 @@ import {
   AfterViewInit,
   ViewEncapsulation
 } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { OPERATOR_INFO } from './fake-data';
 
 @Component({
@@ -13,12 +13,12 @@ import { OPERATOR_INFO } from './fake-data';
   styleUrls: ['./datatable-lesson.component.scss']
 })
 export class DataTableLessonComponent implements AfterViewInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) pager: MatPaginator;
   public dataSource = new MatTableDataSource(OPERATOR_INFO);
 
   ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.pager;
   }
 }
