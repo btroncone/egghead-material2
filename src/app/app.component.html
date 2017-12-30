@@ -1,6 +1,6 @@
 <mat-sidenav-container class="lesson-list-container">
-  <mat-sidenav [mode]="sidenavMode | async"
-               [opened]="!(smallScreen | async)"
+  <mat-sidenav [mode]="sidenavMode"
+               [opened]="!isSmallScreen"
                [fixedInViewport]="true"
                class="lesson-list-sidenav"
                #lessonSidenav>
@@ -21,7 +21,7 @@
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
-<button *ngIf="false"
+<button *ngIf="isSmallScreen"
         mat-mini-fab
         color="primary"
         class="sidenav-toggle"

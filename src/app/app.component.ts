@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -39,10 +39,11 @@ import { LESSON_ROUTES, LessonRoutes } from './lessons/lessons.routes';
   ],
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public lessons = LESSON_ROUTES;
   public routeMap = createRouteMap(LESSON_ROUTES);
   public header$: Observable<string>;
+  public isSmallScreen: boolean;
 
   constructor(
     public lessonConfig: LessonConfigService,
@@ -53,18 +54,19 @@ export class AppComponent {
     this.header$ = _router.events.pipe(
       filter(e => e instanceof NavigationEnd),
       map(_ => this.routeMap[_router.url.replace('/', '')] || 'Tabs Lesson'),
-      shareReplay()
+      shareReplay(1)
     );
   }
 
-  get smallScreen() {
-    return this._breakpointObserver
+  ngOnInit() {
+    this._breakpointObserver
       .observe(['(max-width: 901px)'])
-      .pipe(map(({ matches }) => matches));
+      .pipe(map(({ matches }) => matches))
+      .subscribe(v => (this.isSmallScreen = v));
   }
 
   get sidenavMode() {
-    return this.smallScreen.pipe(map(m => (m ? 'over' : 'side')));
+    return this.isSmallScreen ? 'over' : 'side';
   }
 }
 
