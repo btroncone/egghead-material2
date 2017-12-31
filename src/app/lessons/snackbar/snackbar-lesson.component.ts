@@ -13,7 +13,8 @@ export class SnackbarLessonComponent {
 
   openSnackbar(message: string) {
     const snackBar = this._snackBar.openFromComponent(CustomSnackBarComponent, {
-      data: message
+      data: message,
+      duration: 3000
     });
 
     snackBar.afterDismissed().subscribe(_ => {

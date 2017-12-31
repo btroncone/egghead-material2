@@ -19,6 +19,10 @@ import { DatepickerLessonComponent } from './datepicker-lesson.component';
     MatNativeDateModule,
     MatInputModule,
     MatButtonModule
+    /*
+     * If you wish to use momentjs dates rather than native JS dates
+     * include the below module:
+     */
     // MatMomentDateModule
   ]
 })

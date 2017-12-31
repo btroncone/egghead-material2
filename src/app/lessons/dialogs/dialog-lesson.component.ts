@@ -26,6 +26,7 @@ export class DialogLessonComponent {
   }
 }
 
+// Basic example of dynamic dialog
 @Component({
   selector: 'egm-dialog',
   template: `
