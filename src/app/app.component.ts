@@ -9,7 +9,7 @@ import {
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, Routes, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { map, filter, shareReplay } from 'rxjs/operators';
+import { pluck, map, filter, shareReplay } from 'rxjs/operators';
 import { LessonConfigService } from './shared/lesson-config.service';
 import { LESSON_ROUTES, LessonRoutes } from './lessons/lessons.routes';
 
@@ -61,8 +61,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this._breakpointObserver
       .observe(['(max-width: 901px)'])
-      .pipe(map(({ matches }) => matches))
-      .subscribe(v => (this.isSmallScreen = v));
+      .pipe(pluck('matches'))
+      .subscribe((m: boolean) => (this.isSmallScreen = m));
   }
 
   get sidenavMode() {
